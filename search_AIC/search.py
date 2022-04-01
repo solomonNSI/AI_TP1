@@ -79,7 +79,7 @@ def depthFirstSearch(problem):
     """
     "*** YOUR CODE HERE ***"
     if( problem.isGoalState(problem.getStartState()):
-    return problem
+        return problem
 	
     from util import Stack
     frontier = Stack()
