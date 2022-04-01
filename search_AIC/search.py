@@ -78,24 +78,24 @@ def depthFirstSearch(problem):
     understand the search problem that is being passed in:
     """
     "*** YOUR CODE HERE ***"
-	if( problem.isGoalState(problem.getStartState())
-		return problem
+    if( problem.isGoalState(problem.getStartState()):
+    return problem
 	
-	from util import Stack
-	frontier = Stack()
-	frontier.push(frontier, problem)
-	explored = set()
+    from util import Stack
+    frontier = Stack()
+    frontier.push(frontier, problem)
+    explored = set()
 
-	while problem.isGoalState(problem.getStartState()) == false:
-		if(frontier.isEmpty())
-			return None
-		node = frontier.pop()
-		explored.add(node.getStartState())
-		for action in problem.ACTIONS(node.STATE)
-			child = child-node(problem, node, action)
-			if child.STATE not in frontier || child.STATE not in explored
-				if problem.GOAL-TEST( child.STATE)				
-					return child
+    while problem.isGoalState(problem.getStartState()) == false:
+    	if(frontier.isEmpty())
+            return None
+	    node = frontier.pop()
+	    explored.add(node.getStartState())
+	        for action in problem.ACTIONS(node.STATE)
+		    child = child-node(problem, node, action)
+	            if child.STATE not in frontier || child.STATE not in explored
+			if problem.GOAL-TEST( child.STATE)				
+			    return child
 			frontier.push( frontier, child)
 
     print("Start:", problem.getStartState())
